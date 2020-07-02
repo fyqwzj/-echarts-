@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>疫情平台</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--导航栏部分-->
+		<header>
+			<div class="header_1">
+				<img src="img/logo.jpg" id="img_1" />
+				<span id="span_1">疫情防控监控</span>
+			</div>
+			<div class="header_2">
+				<svg id="header" width="40px" height="40px" viewBox="0 0 16 16" class="bi bi-blockquote-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+					<path fill-rule="evenodd" d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
+					<path d="M12.168 6.352c.184.105.332.197.445.275.114.074.229.174.346.299.11.117.193.24.252.369s.1.295.123.498h-.281c-.243 0-.432.06-.569.182-.14.117-.21.29-.21.521 0 .164.062.318.187.463.121.14.289.21.504.21.336 0 .576-.108.72-.327.145-.223.217-.514.217-.873 0-.254-.054-.485-.164-.692a2.436 2.436 0 0 0-.398-.562c-.16-.168-.33-.31-.51-.428-.18-.117-.33-.213-.451-.287l-.211.352zm-2.168 0c.184.105.332.197.445.275.114.074.229.174.346.299.113.12.2.246.258.375.055.125.094.289.117.492h-.281c-.242 0-.432.06-.569.182-.14.117-.21.29-.21.521 0 .164.062.318.187.463.121.14.289.21.504.21.336 0 .576-.108.72-.327.145-.223.217-.514.217-.873 0-.254-.054-.485-.164-.692a2.438 2.438 0 0 0-.398-.562c-.16-.168-.33-.31-.51-.428-.18-.117-.33-.213-.451-.287L10 6.352z"> </path>
+				</svg>
+				<span id="span_2">勤带口罩，勤洗手。科学防控。战胜疫情，不信谣，不传谣</span>
+				<div class="header_3">
+					<span id="span_3">Ronda</span>
+
+					<svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-power" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top: 4px;color: white">
+						<path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"> </path>
+						<path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"> </path>
+					</svg>
+				</div>
+			</div>
+
+		</header>
+		<!--主体部分-->
+		<section>
+			<!--1左边部分-->
+			<div class="col-md-2">
+				<div class="list-group">
+
+					<a class="list-group-item list-group-item-action" href="index.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-book-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z"> </path>
+							<path fill-rule="evenodd" d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 0 1 8.5 2.5v11a.5.5 0 0 1-.854.354c-.843-.844-2.115-1.059-3.47-.92-1.344.14-2.66.617-3.452 1.013A.5.5 0 0 1 0 13.5v-11a.5.5 0 0 1 .276-.447L.5 2.5l-.224-.447.002-.001.004-.002.013-.006a5.017 5.017 0 0 1 .22-.103 12.958 12.958 0 0 1 2.7-.869z"> </path>
+						</svg> &nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+					<a class="list-group-item list-group-item-action" href="history.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-bullseye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"> </path>
+							<path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+							<path fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+							<path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"> </path>
+						</svg> &nbsp;&nbsp;&nbsp;&nbsp;疫情历史数据</a>
+					<a class="list-group-item list-group-item-action" href="new_thing.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"> </path>
+							<path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"> </path>
+						</svg>&nbsp;&nbsp;&nbsp;&nbsp;附近历史轨迹</a>
+					<a class="list-group-item list-group-item-action" href="患病人群分布.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-eye-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"> </path>
+							<path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299l.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"> </path>
+							<path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709z"> </path>
+							<path fill-rule="evenodd" d="M13.646 14.354l-12-12 .708-.708 12 12-.708.708z"> </path>
+						</svg> &nbsp;&nbsp;&nbsp;&nbsp;患病人群分布</a>
+					<a class="list-group-item list-group-item-action" href="flow.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"> </path>
+							<path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 0 1 9 4.5z"> </path>
+							<path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"> </path>
+						</svg>&nbsp;&nbsp;&nbsp;&nbsp;迁移人口分布</a>
+					<a class="list-group-item list-group-item-action" href="car.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-joystick" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.106 15.553L.553 12.276A1 1 0 0 1 0 11.382V9.471a1 1 0 0 1 .606-.89L6 6.269v1.088L1 9.5l5.658 2.83a3 3 0 0 0 2.684 0L15 9.5l-5-2.143V6.27l5.394 2.312a1 1 0 0 1 .606.89v1.911a1 1 0 0 1-.553.894l-6.553 3.277a2 2 0 0 1-1.788 0z"> </path>
+							<path fill-rule="evenodd" d="M7.5 9.5v-6h1v6h-1z"> </path>
+							<path d="M10 9.75c0 .414-.895.75-2 .75s-2-.336-2-.75S6.895 9 8 9s2 .336 2 .75zM10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"> </path>
+						</svg>&nbsp;&nbsp;&nbsp;&nbsp;武汉车辆分布</a>
+					<a class="list-group-item list-group-item-action" href="improve.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-sim" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M2 1.5A1.5 1.5 0 0 1 3.5 0h7.086a1.5 1.5 0 0 1 1.06.44l1.915 1.914A1.5 1.5 0 0 1 14 3.414V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13zM3.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V3.414a.5.5 0 0 0-.146-.353l-1.915-1.915A.5.5 0 0 0 10.586 1H3.5z"> </path>
+							<path fill-rule="evenodd" d="M5.5 4a.5.5 0 0 0-.5.5V6h2.5V4h-2zm3 0v2H11V4.5a.5.5 0 0 0-.5-.5h-2zM11 7H5v2h6V7zm0 3H8.5v2h2a.5.5 0 0 0 .5-.5V10zm-3.5 2v-2H5v1.5a.5.5 0 0 0 .5.5h2zM4 4.5A1.5 1.5 0 0 1 5.5 3h5A1.5 1.5 0 0 1 12 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 11.5v-7z"> </path>
+						</svg>&nbsp;&nbsp;&nbsp;&nbsp;增长率</a>
+					<a class="list-group-item list-group-item-action" href="vdio.html">
+						<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-wallet2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.5 4l10-3A1.5 1.5 0 0 1 14 2.5v2h-1v-2a.5.5 0 0 0-.5-.5L5.833 4H2.5z"> </path>
+							<path fill-rule="evenodd" d="M1 5.5A1.5 1.5 0 0 1 2.5 4h11A1.5 1.5 0 0 1 15 5.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-8zM2.5 5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-11z"> </path>
+						</svg>&nbsp;&nbsp;&nbsp;&nbsp;宣传视频</a>
+				</div>
+
+			</div>
+			<!--2右边部分-->
+			<div id="main">
+				<!--第一个饼图-->
+				<div class='row'>
+
+					<div id="echart_1" style="width:500px;height: 300px;"></div>
+
+					<div id="echart_2" style="width:600px;height: 300px;"></div>
+
+				</div>
+				<div class='row'>
+
+					<div id="echart_3" style="width:500px;height: 300px;"></div>
+
+					<div id="echart_4" style="width:600px;height: 300px;"></div>
+
+				</div>
+
+			</div>
+
+		</section>
+		<script>
+			var echart = echarts.init(document.getElementById('echart_1'));
+			var option = {
+				backgroundColor: '#2c343c',
+
+				title: {
+					text: '疫情关注度',
+					left: 'center',
+					top: 20,
+					textStyle: {
+						color: '#DFDEDD'
+					}
+				},
+
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b} : {c} ({d}%)'
+				},
+
+				visualMap: {
+					show: false,
+					min: 80,
+					max: 600,
+					inRange: {
+						colorLightness: [0, 1]
+					}
+				},
+				series: [{
+					name: '访问来源',
+					type: 'pie',
+					radius: '55%',
+					center: ['50%', '50%'],
+					data: [{
+							value: 335,
+							name: '直接访问'
+						},
+						{
+							value: 310,
+							name: '邮件营销'
+						},
+						{
+							value: 274,
+							name: '联盟广告'
+						},
+						{
+							value: 235,
+							name: '视频广告'
+						},
+						{
+							value: 400,
+							name: '搜索引擎'
+						}
+					].sort(function(a, b) {
+						return a.value - b.value;
+					}),
+					roseType: 'radius',
+					label: {
+						color: 'rgba(255, 255, 255, 0.3)'
+					},
+					labelLine: {
+						lineStyle: {
+							color: 'rgba(255, 255, 255, 0.3)'
+						},
+						smooth: 0.2,
+						length: 10,
+						length2: 20
+					},
+					itemStyle: {
+						color: '#c23531',
+						shadowBlur: 200,
+						shadowColor: 'rgba(0, 0, 0, 0.5)'
+					},
+
+					animationType: 'scale',
+					animationEasing: 'elasticOut',
+					animationDelay: function(idx) {
+						return Math.random() * 200;
+					}
+				}]
+			};
+			echart.setOption(option);
+		</script>
+		<script>
+			var echart1 = echarts.init(document.getElementById('echart_2'));
+			var dataBJ = [
+				[1, 55, 9, 56, 0.46, 18, 6, "良"],
+				[2, 25, 11, 21, 0.65, 34, 9, "优"],
+				[3, 56, 7, 63, 0.3, 14, 5, "良"],
+				[4, 33, 7, 29, 0.33, 16, 6, "优"],
+				[5, 42, 24, 44, 0.76, 40, 16, "优"],
+				[6, 82, 58, 90, 1.77, 68, 33, "良"],
+				[7, 74, 49, 77, 1.46, 48, 27, "良"],
+				[8, 78, 55, 80, 1.29, 59, 29, "良"],
+				[9, 267, 216, 280, 4.8, 108, 64, "重度污染"],
+				[10, 185, 127, 216, 2.52, 61, 27, "中度污染"],
+				[11, 39, 19, 38, 0.57, 31, 15, "优"],
+				[12, 41, 11, 40, 0.43, 21, 7, "优"],
+				[13, 64, 38, 74, 1.04, 46, 22, "良"],
+				[14, 108, 79, 120, 1.7, 75, 41, "轻度污染"],
+				[15, 108, 63, 116, 1.48, 44, 26, "轻度污染"],
+				[16, 33, 6, 29, 0.34, 13, 5, "优"],
+				[17, 94, 66, 110, 1.54, 62, 31, "良"],
+				[18, 186, 142, 192, 3.88, 93, 79, "中度污染"],
+				[19, 57, 31, 54, 0.96, 32, 14, "良"],
+				[20, 22, 8, 17, 0.48, 23, 10, "优"],
+				[21, 39, 15, 36, 0.61, 29, 13, "优"],
+				[22, 94, 69, 114, 2.08, 73, 39, "良"],
+				[23, 99, 73, 110, 2.43, 76, 48, "良"],
+				[24, 31, 12, 30, 0.5, 32, 16, "优"],
+				[25, 42, 27, 43, 1, 53, 22, "优"],
+				[26, 154, 117, 157, 3.05, 92, 58, "中度污染"],
+				[27, 234, 185, 230, 4.09, 123, 69, "重度污染"],
+				[28, 160, 120, 186, 2.77, 91, 50, "中度污染"],
+				[29, 134, 96, 165, 2.76, 83, 41, "轻度污染"],
+				[30, 52, 24, 60, 1.03, 50, 21, "良"],
+				[31, 46, 5, 49, 0.28, 10, 6, "优"]
+			];
+
+			var dataGZ = [
+				[1, 26, 37, 27, 1.163, 27, 13, "优"],
+				[2, 85, 62, 71, 1.195, 60, 8, "良"],
+				[3, 78, 38, 74, 1.363, 37, 7, "良"],
+				[4, 21, 21, 36, 0.634, 40, 9, "优"],
+				[5, 41, 42, 46, 0.915, 81, 13, "优"],
+				[6, 56, 52, 69, 1.067, 92, 16, "良"],
+				[7, 64, 30, 28, 0.924, 51, 2, "良"],
+				[8, 55, 48, 74, 1.236, 75, 26, "良"],
+				[9, 76, 85, 113, 1.237, 114, 27, "良"],
+				[10, 91, 81, 104, 1.041, 56, 40, "良"],
+				[11, 84, 39, 60, 0.964, 25, 11, "良"],
+				[12, 64, 51, 101, 0.862, 58, 23, "良"],
+				[13, 70, 69, 120, 1.198, 65, 36, "良"],
+				[14, 77, 105, 178, 2.549, 64, 16, "良"],
+				[15, 109, 68, 87, 0.996, 74, 29, "轻度污染"],
+				[16, 73, 68, 97, 0.905, 51, 34, "良"],
+				[17, 54, 27, 47, 0.592, 53, 12, "良"],
+				[18, 51, 61, 97, 0.811, 65, 19, "良"],
+				[19, 91, 71, 121, 1.374, 43, 18, "良"],
+				[20, 73, 102, 182, 2.787, 44, 19, "良"],
+				[21, 73, 50, 76, 0.717, 31, 20, "良"],
+				[22, 84, 94, 140, 2.238, 68, 18, "良"],
+				[23, 93, 77, 104, 1.165, 53, 7, "良"],
+				[24, 99, 130, 227, 3.97, 55, 15, "良"],
+				[25, 146, 84, 139, 1.094, 40, 17, "轻度污染"],
+				[26, 113, 108, 137, 1.481, 48, 15, "轻度污染"],
+				[27, 81, 48, 62, 1.619, 26, 3, "良"],
+				[28, 56, 48, 68, 1.336, 37, 9, "良"],
+				[29, 82, 92, 174, 3.29, 0, 13, "良"],
+				[30, 106, 116, 188, 3.628, 101, 16, "轻度污染"],
+				[31, 118, 50, 0, 1.383, 76, 11, "轻度污染"]
+			];
+
+			var dataSH = [
+				[1, 91, 45, 125, 0.82, 34, 23, "良"],
+				[2, 65, 27, 78, 0.86, 45, 29, "良"],
+				[3, 83, 60, 84, 1.09, 73, 27, "良"],
+				[4, 109, 81, 121, 1.28, 68, 51, "轻度污染"],
+				[5, 106, 77, 114, 1.07, 55, 51, "轻度污染"],
+				[6, 109, 81, 121, 1.28, 68, 51, "轻度污染"],
+				[7, 106, 77, 114, 1.07, 55, 51, "轻度污染"],
+				[8, 89, 65, 78, 0.86, 51, 26, "良"],
+				[9, 53, 33, 47, 0.64, 50, 17, "良"],
+				[10, 80, 55, 80, 1.01, 75, 24, "良"],
+				[11, 117, 81, 124, 1.03, 45, 24, "轻度污染"],
+				[12, 99, 71, 142, 1.1, 62, 42, "良"],
+				[13, 95, 69, 130, 1.28, 74, 50, "良"],
+				[14, 116, 87, 131, 1.47, 84, 40, "轻度污染"],
+				[15, 108, 80, 121, 1.3, 85, 37, "轻度污染"],
+				[16, 134, 83, 167, 1.16, 57, 43, "轻度污染"],
+				[17, 79, 43, 107, 1.05, 59, 37, "良"],
+				[18, 71, 46, 89, 0.86, 64, 25, "良"],
+				[19, 97, 71, 113, 1.17, 88, 31, "良"],
+				[20, 84, 57, 91, 0.85, 55, 31, "良"],
+				[21, 87, 63, 101, 0.9, 56, 41, "良"],
+				[22, 104, 77, 119, 1.09, 73, 48, "轻度污染"],
+				[23, 87, 62, 100, 1, 72, 28, "良"],
+				[24, 168, 128, 172, 1.49, 97, 56, "中度污染"],
+				[25, 65, 45, 51, 0.74, 39, 17, "良"],
+				[26, 39, 24, 38, 0.61, 47, 17, "优"],
+				[27, 39, 24, 39, 0.59, 50, 19, "优"],
+				[28, 93, 68, 96, 1.05, 79, 29, "良"],
+				[29, 188, 143, 197, 1.66, 99, 51, "中度污染"],
+				[30, 174, 131, 174, 1.55, 108, 50, "中度污染"],
+				[31, 187, 143, 201, 1.39, 89, 53, "中度污染"]
+			];
+
+			var schema = [{
+					name: 'date',
+					index: 0,
+					text: '日'
+				},
+				{
+					name: 'AQIindex',
+					index: 1,
+					text: 'AQI指数'
+				},
+				{
+					name: 'PM25',
+					index: 2,
+					text: 'PM2.5'
+				},
+				{
+					name: 'PM10',
+					index: 3,
+					text: 'PM10'
+				},
+				{
+					name: 'CO',
+					index: 4,
+					text: '一氧化碳（CO）'
+				},
+				{
+					name: 'NO2',
+					index: 5,
+					text: '二氧化氮（NO2）'
+				},
+				{
+					name: 'SO2',
+					index: 6,
+					text: '二氧化硫（SO2）'
+				}
+			];
+
+			var itemStyle = {
+				opacity: 0.8,
+				shadowBlur: 10,
+				shadowOffsetX: 0,
+				shadowOffsetY: 0,
+				shadowColor: 'rgba(0, 0, 0, 0.5)'
+			};
+
+			option = {
+				backgroundColor: '#2c343c',
+				grid: {
+
+					left: 880,
+					top: 30
+				},
+
+				color: [
+					'#dd4444', '#fec42c', '#80F1BE'
+				],
+				legend: {
+					top: 10,
+					data: ['北京', '上海', '广州'],
+					textStyle: {
+						color: '#fff',
+						fontSize: 16
+					}
+				},
+				grid: {
+					left: '10%',
+					right: 150,
+					top: '18%',
+					bottom: '10%'
+				},
+				tooltip: {
+					padding: 10,
+					backgroundColor: '#222',
+					borderColor: '#777',
+					borderWidth: 1,
+					formatter: function(obj) {
+						var value = obj.value;
+						return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+							obj.seriesName + ' ' + value[0] + '日：' +
+							value[7] +
+							'</div>' +
+							schema[1].text + '：' + value[1] + '<br>' +
+							schema[2].text + '：' + value[2] + '<br>' +
+							schema[3].text + '：' + value[3] + '<br>' +
+							schema[4].text + '：' + value[4] + '<br>' +
+							schema[5].text + '：' + value[5] + '<br>' +
+							schema[6].text + '：' + value[6] + '<br>';
+					}
+				},
+				xAxis: {
+					type: 'value',
+					name: '日期',
+					nameGap: 16,
+					nameTextStyle: {
+						color: '#fff',
+						fontSize: 14
+					},
+					max: 31,
+					splitLine: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#eee'
+						}
+					}
+				},
+				yAxis: {
+					type: 'value',
+					name: 'AQI指数',
+					nameLocation: 'end',
+					nameGap: 20,
+					nameTextStyle: {
+						color: '#fff',
+						fontSize: 16
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#eee'
+						}
+					},
+					splitLine: {
+						show: false
+					}
+				},
+				visualMap: [{
+						left: 'right',
+						top: '10%',
+						dimension: 2,
+						min: 0,
+						max: 250,
+						itemWidth: 30,
+						itemHeight: 120,
+						calculable: true,
+						precision: 0.1,
+						text: ['圆形大小：PM2.5'],
+						textGap: 30,
+						textStyle: {
+							color: '#fff'
+						},
+						inRange: {
+							symbolSize: [10, 70]
+						},
+						outOfRange: {
+							symbolSize: [10, 70],
+							color: ['rgba(255,255,255,.2)']
+						},
+						controller: {
+							inRange: {
+								color: ['#c23531']
+							},
+							outOfRange: {
+								color: ['#444']
+							}
+						}
+					},
+					{
+						left: 'right',
+						bottom: '5%',
+						dimension: 6,
+						min: 0,
+						max: 50,
+						itemHeight: 120,
+
+						precision: 0.1,
+						text: ['明暗：二氧化硫'],
+						textGap: 30,
+						textStyle: {
+							color: '#fff'
+						},
+						inRange: {
+							colorLightness: [1, 0.5]
+						},
+						outOfRange: {
+							color: ['rgba(255,255,255,.2)']
+						},
+						controller: {
+							inRange: {
+								color: ['#c23531']
+							},
+							outOfRange: {
+								color: ['#444']
+							}
+						}
+					}
+				],
+				series: [{
+						name: '北京',
+						type: 'scatter',
+						itemStyle: itemStyle,
+						data: dataBJ
+					},
+					{
+						name: '上海',
+						type: 'scatter',
+						itemStyle: itemStyle,
+						data: dataSH
+					},
+					{
+						name: '广州',
+						type: 'scatter',
+						itemStyle: itemStyle,
+						data: dataGZ
+					}
+				]
+			};
+			echart1.setOption(option);
+		</script>
+		<script>
+			var echart3 = echarts.init(document.getElementById('echart_3'));
+			var data = [
+				[
+					[28604, 77, 17096869, 'Australia', 1990],
+					[31163, 77.4, 27662440, 'Canada', 1990],
+					[1516, 68, 1154605773, 'China', 1990],
+					[13670, 74.7, 10582082, 'Cuba', 1990],
+					[28599, 75, 4986705, 'Finland', 1990],
+					[29476, 77.1, 56943299, 'France', 1990],
+					[31476, 75.4, 78958237, 'Germany', 1990],
+					[28666, 78.1, 254830, 'Iceland', 1990],
+					[1777, 57.7, 870601776, 'India', 1990],
+					[29550, 79.1, 122249285, 'Japan', 1990],
+					[2076, 67.9, 20194354, 'North Korea', 1990],
+					[12087, 72, 42972254, 'South Korea', 1990],
+					[24021, 75.4, 3397534, 'New Zealand', 1990],
+					[43296, 76.8, 4240375, 'Norway', 1990],
+					[10088, 70.8, 38195258, 'Poland', 1990],
+					[19349, 69.6, 147568552, 'Russia', 1990],
+					[10670, 67.3, 53994605, 'Turkey', 1990],
+					[26424, 75.7, 57110117, 'United Kingdom', 1990],
+					[37062, 75.4, 252847810, 'United States', 1990]
+				],
+				[
+					[44056, 81.8, 23968973, 'Australia', 2015],
+					[43294, 81.7, 35939927, 'Canada', 2015],
+					[13334, 76.9, 1376048943, 'China', 2015],
+					[21291, 78.5, 11389562, 'Cuba', 2015],
+					[38923, 80.8, 5503457, 'Finland', 2015],
+					[37599, 81.9, 64395345, 'France', 2015],
+					[44053, 81.1, 80688545, 'Germany', 2015],
+					[42182, 82.8, 329425, 'Iceland', 2015],
+					[5903, 66.8, 1311050527, 'India', 2015],
+					[36162, 83.5, 126573481, 'Japan', 2015],
+					[1390, 71.4, 25155317, 'North Korea', 2015],
+					[34644, 80.7, 50293439, 'South Korea', 2015],
+					[34186, 80.6, 4528526, 'New Zealand', 2015],
+					[64304, 81.6, 5210967, 'Norway', 2015],
+					[24787, 77.3, 38611794, 'Poland', 2015],
+					[23038, 73.13, 143456918, 'Russia', 2015],
+					[19360, 76.5, 78665830, 'Turkey', 2015],
+					[38225, 81.4, 64715810, 'United Kingdom', 2015],
+					[53354, 79.1, 321773631, 'United States', 2015]
+				]
+			];
+
+			option = {
+				backgroundColor: '#2c343c',
+
+				title: {
+					text: '1990 与 2015 年各国家人均寿命与 GDP',
+					textStyle: {
+						color: 'pink'
+					}
+
+				},
+				//				grid:{
+				//					right:'60%',
+				//					height:'40%'
+				//				},
+				legend: {
+					right: 10,
+					data: ['1990', '2015'],
+					textStyle: {
+						color: 'pink'
+					}
+
+				},
+				xAxis: {
+					splitLine: {
+						lineStyle: {
+							type: 'dashed'
+						}
+					}
+				},
+				yAxis: {
+					splitLine: {
+						lineStyle: {
+							type: 'dashed'
+						}
+					},
+					scale: true
+				},
+				series: [{
+					name: '1990',
+					data: data[0],
+					type: 'scatter',
+					symbolSize: function(data) {
+						return Math.sqrt(data[2]) / 5e2;
+					},
+					emphasis: {
+						label: {
+							show: true,
+							formatter: function(param) {
+								return param.data[3];
+							},
+							position: 'top'
+						}
+					},
+					itemStyle: {
+						shadowBlur: 10,
+						shadowColor: 'rgba(255, 255, 255, 0.5)',
+						shadowOffsetY: 5,
+						color: new echarts.graphic.RadialGradient(0.2, 0.8, 1, [{
+							offset: 0,
+							color: 'rgb(251, 118, 123)'
+						}, {
+							offset: 1,
+							color: 'rgb(204, 46, 72)'
+						}])
+					}
+				}, {
+					name: '2015',
+					data: data[1],
+					type: 'scatter',
+					symbolSize: function(data) {
+						return Math.sqrt(data[2]) / 5e2;
+					},
+					emphasis: {
+						label: {
+							show: true,
+							formatter: function(param) {
+								return param.data[3];
+							},
+							position: 'top'
+						}
+					},
+					itemStyle: {
+						shadowBlur: 10,
+						shadowColor: 'rgba(25, 100, 150, )',
+						shadowOffsetY: 5,
+						color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+							offset: 0,
+							color: 'rgb(129, 227, 238)'
+						}, {
+							offset: 1,
+							color: 'rgb(25, 183, 207)'
+						}])
+					}
+				}]
+			};
+			echart3.setOption(option);
+		</script>
+		<script>
+			var echart4 = echarts.init(document.getElementById('echart_4'));
+			var option = {
+				backgroundColor: '#2c343c',
+				legend: {},
+				tooltip: {},
+				dataset: {
+					source: [
+						['product', '2015', '2016', '2017'],
+						['Matcha Latte', 43.3, 85.8, 93.7],
+						['Milk Tea', 83.1, 73.4, 55.1],
+						['Cheese Cocoa', 86.4, 65.2, 82.5],
+						['Walnut Brownie', 72.4, 53.9, 39.1]
+					]
+				},
+				xAxis: {
+					type: 'category'
+				},
+				yAxis: {},
+				// Declare several bar series, each will be mapped
+				// to a column of dataset.source by default.
+				series: [{
+						type: 'bar'
+					},
+					{
+						type: 'bar'
+					},
+					{
+						type: 'bar'
+					}
+				]
+			};
+				echart4.setOption(option);
+		</script>
+
+	</body>
+
+</html>
